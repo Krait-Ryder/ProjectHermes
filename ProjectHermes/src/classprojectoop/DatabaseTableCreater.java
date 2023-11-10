@@ -23,7 +23,7 @@ public class DatabaseTableCreater {
             String createStatement = "CREATE DATABASE IF NOT EXISTS hermes";
             statement.executeUpdate(createStatement);
             System.out.println("Database Created");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
+            /*connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
             System.out.println("Connected to new database");
             String createTable = "CREATE TABLE IF NOT EXSISTS messages("
                     + "id INT AUTO_INCREMENT PRIMARY KEY not NULL,"
@@ -32,8 +32,10 @@ public class DatabaseTableCreater {
                     + "profileId INT NOT NULL"
                     + ")";
             statement.executeUpdate(createTable);
-            System.out.println("Table Created");
+            System.out.println("Table Created Hello");
+*/
         }
+
         catch (SQLException e){
             e.printStackTrace();
         }
