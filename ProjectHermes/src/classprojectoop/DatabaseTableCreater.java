@@ -5,6 +5,8 @@
 package classprojectoop;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author Samantha
  */
 public class DatabaseTableCreater {
-    static final String URL = "jdbc:mysql://localhost:3306";
+    static final String URL = "jdbc:mysql://localhost:3306/hermes";
     static  String user = "root";
     static  String pass = "";
     public void createDatabase(){
@@ -33,11 +35,69 @@ public class DatabaseTableCreater {
                     + ")";
             statement.executeUpdate(createTable);
             System.out.println("Table Created Hello");
+            String 
 */
+           /* String newTable = "CREATE TABLE users("
+                    + "id INT AUTO_INCREMENT PRIMARY KEY,"
+                    + "userName VARCHAR(255),"
+                    + "password VARCHAR(255),"
+                    + "email VARCHAR(255))";
+            statement.executeUpdate(newTable);
+            System.out.println("Table created");*/
+            String newTable = "CREATE TABLE messages("
+                    + "id INT AUTO_INCREMENT PRIMARY KEY,"
+                    + "message VARCHAR(255))";
+            statement.executeUpdate(newTable);
+            System.out.println("Table created");
+            
         }
 
         catch (SQLException e){
             e.printStackTrace();
         }
     }
+    public void insertUser(String users,String passwords, String email){
+        try{  
+          Connection connection = DriverManager.getConnection(URL,user,pass);
+          Statement statement = connection.createStatement();
+          String insertUser = "INSERT INTO users(userName,password,email) VALUES('"+users+"','"+passwords+"','"+email+"')";
+          String [] strings = new String []{users,passwords,email};
+          
+          statement.executeUpdate(insertUser, strings);
+            System.out.println("User Added");
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
+    }
+    public void sendMessage(String message){
+        // send the message
+          Connection connection;
+        try {
+            connection = DriverManager.getConnection(URL,user,pass);
+             Statement statement = connection.createStatement();
+             String sentMessage = "INSERT INTO messages(message) VALUES('"+message+"')";
+             statement.executeUpdate(sentMessage);
+             System.out.println("Message Sent");
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseTableCreater.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public String getMessage(){
+        String message = "";
+        try {
+            
+            Connection connection = DriverManager.getConnection(URL,user,pass);
+            Statement statement = connection.createStatement();
+            String getMessage = "SELECT message FROM messages WHERE id = 1";
+            statement.executeUpdate(getMessage);
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseTableCreater.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         return message;
+    }
+ 
 }
+
+    

@@ -14,8 +14,11 @@ public class MainApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        DatabaseTableCreater dbc = new DatabaseTableCreater();
-        dbc.createDatabase();
+       //DatabaseTableCreater dbc = new DatabaseTableCreater();
+       //dbc.createDatabase();
+        //HermesFrame frame = new HermesFrame();
+        FrameForPanels ffp = new FrameForPanels();
+        
     }
     
 }
