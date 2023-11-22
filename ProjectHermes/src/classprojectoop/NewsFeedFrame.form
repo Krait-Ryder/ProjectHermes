@@ -145,7 +145,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="msgLbl" linkSize="3" min="-2" pref="236" max="-2" attributes="0"/>
-                          <Component id="jLabel1" linkSize="3" min="-2" pref="228" max="-2" attributes="0"/>
+                          <Component id="msgTwoLbl" linkSize="3" min="-2" pref="228" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="426" max="32767" attributes="0"/>
                   </Group>
@@ -159,10 +159,10 @@
                           <Component id="userLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="msgLbl" linkSize="2" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="userTwoLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="msgTwoLbl" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="130" max="32767" attributes="0"/>
                   </Group>
@@ -183,7 +183,9 @@
                 <Property name="text" type="java.lang.String" value=" I love doing GUI!"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder/>
+                    <TitledBorder>
+                      <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                    </TitledBorder>
                   </Border>
                 </Property>
               </Properties>
@@ -193,7 +195,7 @@
                 <Property name="text" type="java.lang.String" value="James O&apos;Neill"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="msgTwoLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="GUI is so much fun!"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

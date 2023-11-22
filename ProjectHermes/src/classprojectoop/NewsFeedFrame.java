@@ -33,7 +33,7 @@ public class NewsFeedFrame extends javax.swing.JInternalFrame {
         userLbl = new javax.swing.JLabel();
         msgLbl = new javax.swing.JLabel();
         userTwoLbl = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        msgTwoLbl = new javax.swing.JLabel();
         descTF = new javax.swing.JTextField();
         postBtn = new javax.swing.JButton();
 
@@ -69,12 +69,12 @@ public class NewsFeedFrame extends javax.swing.JInternalFrame {
 
         msgLbl.setBackground(new java.awt.Color(204, 204, 204));
         msgLbl.setText(" I love doing GUI!");
-        msgLbl.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        msgLbl.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
 
         userTwoLbl.setText("James O'Neill");
 
-        jLabel1.setText("GUI is so much fun!");
-        jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        msgTwoLbl.setText("GUI is so much fun!");
+        msgTwoLbl.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         javax.swing.GroupLayout linksPanelLayout = new javax.swing.GroupLayout(linksPanel);
         linksPanel.setLayout(linksPanelLayout);
@@ -88,11 +88,11 @@ public class NewsFeedFrame extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(linksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(msgLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(msgTwoLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(426, Short.MAX_VALUE))
         );
 
-        linksPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel1, msgLbl});
+        linksPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {msgLbl, msgTwoLbl});
 
         linksPanelLayout.setVerticalGroup(
             linksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,14 +101,14 @@ public class NewsFeedFrame extends javax.swing.JInternalFrame {
                 .addGroup(linksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(userLbl)
                     .addComponent(msgLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
                 .addGroup(linksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(userTwoLbl)
-                    .addComponent(jLabel1))
+                    .addComponent(msgTwoLbl))
                 .addContainerGap(130, Short.MAX_VALUE))
         );
 
-        linksPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel1, msgLbl});
+        linksPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {msgLbl, msgTwoLbl});
 
         descTF.setText("Any News??");
         descTF.addActionListener(new java.awt.event.ActionListener() {
@@ -177,9 +177,9 @@ public class NewsFeedFrame extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JTextField descTF;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel linksPanel;
     private javax.swing.JLabel msgLbl;
+    private javax.swing.JLabel msgTwoLbl;
     private javax.swing.JLabel newsFeedLbl;
     private javax.swing.JPanel newsFeedPanel;
     private javax.swing.JButton postBtn;
