@@ -49,7 +49,7 @@ public class DatabaseTableCreater {
                     + "password VARCHAR(255),"
                     + "email VARCHAR(255))";
             statement.executeUpdate(newTable);
-            System.out.println("Table created");*/
+            System.out.println("Table created");
             String newTable = "CREATE TABLE messages("
                     + "id INT AUTO_INCREMENT PRIMARY KEY,"
                     + "message VARCHAR(255))";
