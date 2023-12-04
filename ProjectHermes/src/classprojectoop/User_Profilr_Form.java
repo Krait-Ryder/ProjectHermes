@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package andrei_form;
+package classprojectoop.andrei_form;
 
-import example1.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

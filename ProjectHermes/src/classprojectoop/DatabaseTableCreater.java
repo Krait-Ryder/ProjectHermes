@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author Samantha
  */
 public class DatabaseTableCreater {
-    static final String URL = "jdbc:mysql://localhost:3306/hermes";
+    static final String URL = "jdbc:mysql://localhost:3306";
     static  String user = "root";
     static  String pass = "";
     public void createDatabase(){
@@ -26,37 +26,33 @@ public class DatabaseTableCreater {
             statement.executeUpdate(createStatement);
             System.out.println("Database Created");
 
-            /*connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
             System.out.println("Connected to new database");
 
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
-            System.out.println("Connected to new database");/*
+            System.out.println("Connected to new database");
 
             String createTable = "CREATE TABLE IF NOT EXSISTS messages("
                     + "id INT AUTO_INCREMENT PRIMARY KEY not NULL,"
                     + "message VARCHAR(500),"
-                    + "time TIMESTAMP DEFAULT CURRENT_TIMESTAMP"
-                    + "profileId INT NOT NULL"
-                    + ")";
+                    + "profileId INT NOT NULL)";
             statement.executeUpdate(createTable);
 
             System.out.println("Table Created Hello");
-            String 
-*/
-           /* String newTable = "CREATE TABLE users("
+    
+
+            String newTable = "CREATE TABLE users(" 
                     + "id INT AUTO_INCREMENT PRIMARY KEY,"
                     + "userName VARCHAR(255),"
                     + "password VARCHAR(255),"
                     + "email VARCHAR(255))";
             statement.executeUpdate(newTable);
             System.out.println("Table created");
-            String newTable = "CREATE TABLE messages("
-                    + "id INT AUTO_INCREMENT PRIMARY KEY,"
-                    + "message VARCHAR(255))";
+            
             statement.executeUpdate(newTable);
             System.out.println("Table created");
             
-            System.out.println("Table Created");*/
+            System.out.println("Table Created");
 
         }
 
