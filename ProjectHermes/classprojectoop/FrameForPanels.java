@@ -9,13 +9,16 @@ package classprojectoop;
  * @author Samantha
  */
 public class FrameForPanels extends javax.swing.JFrame {
+    
+    userProfileForm upf = new userProfileForm ();
     frontMainPage fmp = new frontMainPage();
-    MessagesFrame mf = new MessagesFrame();
+    messageForm mf = new  messageForm ();
+    MessagesFrame msf = new MessagesFrame();
     ProfilesFrame pf = new ProfilesFrame();
     NewsFeedFrame nff = new NewsFeedFrame();
     GroupsFrame gf = new GroupsFrame();
     SignInFrame sif = new SignInFrame();
-
+    
     /**
      * Creates new form FrameForPanels
      */
@@ -145,9 +148,13 @@ public class FrameForPanels extends javax.swing.JFrame {
     private void profilesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profilesBtnActionPerformed
         // TODO add your handling code here:
         if (desktopPanel.getSelectedFrame() != pf) {
-
+            
             desktopPanel.removeAll();
             desktopPanel.add(pf).setVisible(true);
+            
+            // display the frame Front mane Page
+            upf.setVisible(true);
+            this.setVisible(false); 
             try {
                 pf.setSelected(true);
             } catch (java.beans.PropertyVetoException e) {
@@ -161,22 +168,20 @@ public class FrameForPanels extends javax.swing.JFrame {
 
     private void messagesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messagesBtnActionPerformed
         // TODO add your handling code here:
-        // removing the current fame
-        if (desktopPanel.getSelectedFrame() != mf) {
+        // removing the current frame
+        if (desktopPanel.getSelectedFrame() != msf) {
             desktopPanel.removeAll();
             // add mf the Message Frame to the desktopPanel
-            desktopPanel.add(mf).setVisible(true);
-
-            // display the frame     
-            //frontMainPage fmp = new frontMainPage ();
-              fmp.setVisible(true);
-              this.setVisible(false);
-            //try {
-           //     mf.setSelected(true);
-           // } catch (java.beans.PropertyVetoException e) {
-           //     System.out.println(e);
-           // }
-           // desktopPanel.repaint();
+            desktopPanel.add(gf).setVisible(true);
+            mf.setVisible(true);
+           this.setVisible(false);
+            try {
+             msf.setSelected(true);
+           } catch (java.beans.PropertyVetoException e) {
+               System.out.println(e);
+            }
+            desktopPanel.repaint();
+            desktopPanel.revalidate();
         }
 
     }//GEN-LAST:event_messagesBtnActionPerformed
@@ -196,6 +201,7 @@ public class FrameForPanels extends javax.swing.JFrame {
                 System.out.println(e);
             }
             desktopPanel.repaint();
+            desktopPanel.revalidate();
         }
     }//GEN-LAST:event_newsFeedBtnActionPerformed
 
@@ -218,14 +224,18 @@ public class FrameForPanels extends javax.swing.JFrame {
         if (desktopPanel.getSelectedFrame() != sif) {
             desktopPanel.removeAll();
             desktopPanel.add(sif).setVisible(true);
+             //display the frame Front mane Page
+            fmp.setVisible(true);
+           this.setVisible(false);
             try{
                 sif.setSelected(true);
-            }
-            catch(java.beans.PropertyVetoException e){
-                System.out.println(e);
+           }
+           catch(java.beans.PropertyVetoException e){
+               System.out.println(e);
             }
             desktopPanel.repaint();
-        }
+            desktopPanel.revalidate();
+      }
     }//GEN-LAST:event_inOutBtnActionPerformed
 
     /**

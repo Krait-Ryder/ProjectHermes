@@ -12,7 +12,7 @@ package classprojectoop;
  */
 public class messageForm extends javax.swing.JFrame {
     //  a list of users    
-   
+    DatabaseTableCreater dbc = new DatabaseTableCreater();
     
     /**
      * Creates new form messageForm
@@ -42,11 +42,13 @@ public class messageForm extends javax.swing.JFrame {
         searchBtn = new javax.swing.JButton();
         comboBoxUsers = new javax.swing.JComboBox<>();
         scrollPanelUser1 = new javax.swing.JScrollPane();
-        meassage1TA = new javax.swing.JTextArea();
+        message1TA = new javax.swing.JTextArea();
+        userLbl1 = new javax.swing.JLabel();
         backgroundMessage1Lbl = new javax.swing.JLabel();
         userImage2Lbl = new javax.swing.JLabel();
         scrollPanelUser2 = new javax.swing.JScrollPane();
         message2TA = new javax.swing.JTextArea();
+        userlbl2 = new java.awt.Label();
         backgroundMessage2Lbl = new javax.swing.JLabel();
         userImage1Lbl = new javax.swing.JLabel();
         subMainPageImageLbl = new javax.swing.JLabel();
@@ -116,12 +118,18 @@ public class messageForm extends javax.swing.JFrame {
         });
         jPanel1.add(comboBoxUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 190, 30));
 
-        meassage1TA.setBackground(new java.awt.Color(51, 255, 0));
-        meassage1TA.setColumns(20);
-        meassage1TA.setRows(5);
-        scrollPanelUser1.setViewportView(meassage1TA);
+        message1TA.setBackground(new java.awt.Color(51, 255, 0));
+        message1TA.setColumns(20);
+        message1TA.setRows(5);
+        scrollPanelUser1.setViewportView(message1TA);
 
         jPanel1.add(scrollPanelUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 240, 110));
+
+        userLbl1.setBackground(new java.awt.Color(255, 255, 255));
+        userLbl1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        userLbl1.setText("user1");
+        userLbl1.setToolTipText("");
+        jPanel1.add(userLbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 100, 20));
 
         backgroundMessage1Lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         backgroundMessage1Lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_chat/chat bacground .png12323.png"))); // NOI18N
@@ -139,6 +147,21 @@ public class messageForm extends javax.swing.JFrame {
         scrollPanelUser2.setViewportView(message2TA);
 
         jPanel1.add(scrollPanelUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 240, 110));
+
+        userlbl2.setAlignment(java.awt.Label.CENTER);
+        userlbl2.setBackground(new java.awt.Color(255, 153, 51));
+        userlbl2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        userlbl2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        userlbl2.setName(""); // NOI18N
+        userlbl2.setText("User2");
+        userlbl2.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                userlbl2InputMethodTextChanged(evt);
+            }
+        });
+        jPanel1.add(userlbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 100, 30));
 
         backgroundMessage2Lbl.setForeground(new java.awt.Color(255, 255, 255));
         backgroundMessage2Lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_chat/new 123.png"))); // NOI18N
@@ -190,11 +213,14 @@ public class messageForm extends javax.swing.JFrame {
     }//GEN-LAST:event_mainPageBtnActionPerformed
 
     private void sendMessageBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendMessageBtnActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
-        
+      // TODO add your handling code here:
+      //  String user = userTF.getText();
+       // String password = passwordTF.getText();
+        //String email = emailTF.getText();
+      // dbc.insertUser(user,password,email);
+       String message = message1TA.getText();
+       dbc.sendMessage(message);
+       System.out.println("message Created"); 
     }//GEN-LAST:event_sendMessageBtnActionPerformed
 
     private void comboBoxUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxUsersActionPerformed
@@ -211,6 +237,11 @@ public class messageForm extends javax.swing.JFrame {
     private void searchBarTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBarTFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchBarTFActionPerformed
+
+    private void userlbl2InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_userlbl2InputMethodTextChanged
+        // TODO add your handling code here:
+        String user = userlbl2.getText();
+    }//GEN-LAST:event_userlbl2InputMethodTextChanged
 
     /**
      * @param args the command line arguments
@@ -254,7 +285,7 @@ public class messageForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton mainPageBtn;
     private javax.swing.JLabel mainPageImageLbl;
-    private javax.swing.JTextArea meassage1TA;
+    private javax.swing.JTextArea message1TA;
     private javax.swing.JTextArea message2TA;
     private javax.swing.JButton nextPageBtn;
     private javax.swing.JScrollPane scrollPanelUser1;
@@ -266,6 +297,8 @@ public class messageForm extends javax.swing.JFrame {
     private javax.swing.JLabel topTextLbl;
     private javax.swing.JLabel userImage1Lbl;
     private javax.swing.JLabel userImage2Lbl;
+    private javax.swing.JLabel userLbl1;
+    private java.awt.Label userlbl2;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -104,11 +104,11 @@ public class HermesFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void insertUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertUserBtnActionPerformed
-        // TODO add your handling code here:
-       /* String user = userTF.getText();
+        //TODO add your handling code here:
+        String user = userTF.getText();
         String password = passwordTF.getText();
         String email = emailTF.getText();
-        dbc.insertUser(user,password,email);*/
+       dbc.insertUser(user,password,email);
        String message = messageTA.getText();
        dbc.sendMessage(message);
     }//GEN-LAST:event_insertUserBtnActionPerformed

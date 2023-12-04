@@ -51,11 +51,11 @@ public class frontPage extends javax.swing.JFrame {
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Sign up");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jLayeredPane1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 550, 30));
+        jLayeredPane1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 300, 50));
 
         helpBtn.setBackground(new java.awt.Color(255, 153, 0));
         helpBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -72,7 +72,7 @@ public class frontPage extends javax.swing.JFrame {
                 newAccountBtnActionPerformed(evt);
             }
         });
-        jLayeredPane1.add(newAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 150, 40));
+        jLayeredPane1.add(newAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 150, 40));
 
         nameTF.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nameTF.setText("  Your name ");
@@ -92,7 +92,7 @@ public class frontPage extends javax.swing.JFrame {
         newAccountLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         newAccountLbl.setForeground(new java.awt.Color(255, 255, 255));
         newAccountLbl.setText("for new Account ");
-        jLayeredPane1.add(newAccountLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 110, 40));
+        jLayeredPane1.add(newAccountLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 110, 40));
 
         passroedLbl.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         passroedLbl.setForeground(new java.awt.Color(255, 255, 255));

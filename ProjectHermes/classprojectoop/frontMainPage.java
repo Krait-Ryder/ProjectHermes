@@ -30,7 +30,7 @@ public class frontMainPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        fmpPanel = new javax.swing.JPanel();
         passwordTF = new javax.swing.JPasswordField();
         showPassword = new javax.swing.JCheckBox();
         nameTF = new javax.swing.JTextField();
@@ -52,14 +52,16 @@ public class frontMainPage extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(720, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setMinimumSize(new java.awt.Dimension(780, 500));
-        jPanel1.setPreferredSize(new java.awt.Dimension(780, 500));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        fmpPanel.setMinimumSize(new java.awt.Dimension(780, 500));
+        fmpPanel.setPreferredSize(new java.awt.Dimension(780, 500));
+        fmpPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         passwordTF.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         passwordTF.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel1.add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 200, 30));
+        fmpPanel.add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 200, 30));
 
+        showPassword.setBackground(new java.awt.Color(255, 102, 0));
+        showPassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         showPassword.setForeground(new java.awt.Color(255, 255, 255));
         showPassword.setText("Show Password ");
         showPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +69,7 @@ public class frontMainPage extends javax.swing.JFrame {
                 showPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(showPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
+        fmpPanel.add(showPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, -1, 20));
 
         nameTF.setColumns(2);
         nameTF.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -83,43 +85,43 @@ public class frontMainPage extends javax.swing.JFrame {
                 nameTFActionPerformed(evt);
             }
         });
-        jPanel1.add(nameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 200, 30));
+        fmpPanel.add(nameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 200, 30));
 
         mainPageText1Lbl.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         mainPageText1Lbl.setForeground(new java.awt.Color(255, 255, 255));
         mainPageText1Lbl.setText("Save your snip of memories");
-        jPanel1.add(mainPageText1Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 360, 40));
+        fmpPanel.add(mainPageText1Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 360, 40));
 
         passwordLbl.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         passwordLbl.setForeground(new java.awt.Color(255, 255, 255));
         passwordLbl.setText("Password");
-        jPanel1.add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 110, 30));
+        fmpPanel.add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 110, 30));
 
         userLbl.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         userLbl.setForeground(new java.awt.Color(255, 255, 255));
         userLbl.setText("User name");
-        jPanel1.add(userLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 120, 30));
+        fmpPanel.add(userLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 120, 30));
 
         logoMainPageLbl.setBackground(new java.awt.Color(255, 255, 255));
         logoMainPageLbl.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         logoMainPageLbl.setForeground(new java.awt.Color(255, 255, 255));
         logoMainPageLbl.setText("HERMES");
-        jPanel1.add(logoMainPageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, 280, 50));
+        fmpPanel.add(logoMainPageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, 280, 50));
 
         mainPageText2Lbl.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         mainPageText2Lbl.setForeground(new java.awt.Color(255, 255, 255));
         mainPageText2Lbl.setText("Share your impressions");
-        jPanel1.add(mainPageText2Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 250, 60));
+        fmpPanel.add(mainPageText2Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 250, 60));
 
         mainPageText4Lbl.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         mainPageText4Lbl.setForeground(new java.awt.Color(255, 255, 255));
         mainPageText4Lbl.setText("Stay with HERMES");
-        jPanel1.add(mainPageText4Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 220, 30));
+        fmpPanel.add(mainPageText4Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 220, 30));
 
         mainPageText3Lbl.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         mainPageText3Lbl.setForeground(new java.awt.Color(255, 255, 255));
         mainPageText3Lbl.setText("Stay Log on");
-        jPanel1.add(mainPageText3Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 160, 30));
+        fmpPanel.add(mainPageText3Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 160, 30));
 
         exitBtn.setBackground(new java.awt.Color(51, 102, 255));
         exitBtn.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
@@ -131,14 +133,19 @@ public class frontMainPage extends javax.swing.JFrame {
                 exitBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(exitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 120, 50));
+        fmpPanel.add(exitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 120, 50));
 
         newUserBtn.setBackground(new java.awt.Color(0, 204, 51));
         newUserBtn.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         newUserBtn.setForeground(new java.awt.Color(255, 255, 255));
         newUserBtn.setText(" Create New Account ");
         newUserBtn.setActionCommand(" Log In");
-        jPanel1.add(newUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 270, 50));
+        newUserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newUserBtnActionPerformed(evt);
+            }
+        });
+        fmpPanel.add(newUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 270, 50));
 
         loginBtn.setBackground(new java.awt.Color(51, 102, 255));
         loginBtn.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
@@ -150,26 +157,26 @@ public class frontMainPage extends javax.swing.JFrame {
                 loginBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 140, 40));
+        fmpPanel.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 140, 40));
 
         ImageMainPageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_chat/Logo_chat_Main_page.png"))); // NOI18N
         ImageMainPageLbl.setToolTipText("");
-        jPanel1.add(ImageMainPageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 320, 270));
+        fmpPanel.add(ImageMainPageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 320, 270));
 
         backgrounPageImageLbl.setBackground(new java.awt.Color(255, 255, 255));
         backgrounPageImageLbl.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         backgrounPageImageLbl.setForeground(new java.awt.Color(255, 255, 255));
         backgrounPageImageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_chat/Image_Main_page.gif"))); // NOI18N
         backgrounPageImageLbl.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(backgrounPageImageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 700, 300));
+        fmpPanel.add(backgrounPageImageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 700, 300));
 
         mainPageImageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_chat/Snip_for_main_Page01.jpg"))); // NOI18N
         mainPageImageLbl.setMaximumSize(new java.awt.Dimension(720, 500));
         mainPageImageLbl.setMinimumSize(new java.awt.Dimension(720, 500));
-        jPanel1.add(mainPageImageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
+        fmpPanel.add(mainPageImageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
         mainPageImageLbl.getAccessibleContext().setAccessibleName("");
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
+        getContentPane().add(fmpPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
 
         pack();
         setLocationRelativeTo(null);
@@ -185,10 +192,12 @@ public class frontMainPage extends javax.swing.JFrame {
         }
         else if (nameTF.getText().contains("Andrei")&& passwordTF.getText().contains("12345")){   /// User name and Login Cridentias 
         JOptionPane.showMessageDialog(null,"Login User");
-        
-           messageForm mf = new messageForm ();
+         System.out.println("User Login");
+           
+           messageForm mf = new messageForm (); 
            mf.setVisible(true);
            this.setVisible(false);
+           System.out.println("next Page");
         }
         else {
            JOptionPane.showMessageDialog(null ,"Wrong User Name or Password","Message" , JOptionPane.ERROR_MESSAGE);   
@@ -216,6 +225,10 @@ public class frontMainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_exitBtnActionPerformed
+
+    private void newUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newUserBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newUserBtnActionPerformed
        
           
     
@@ -262,7 +275,7 @@ public class frontMainPage extends javax.swing.JFrame {
     private javax.swing.JLabel ImageMainPageLbl;
     private javax.swing.JLabel backgrounPageImageLbl;
     private javax.swing.JButton exitBtn;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel fmpPanel;
     private javax.swing.JButton loginBtn;
     private javax.swing.JLabel logoMainPageLbl;
     private javax.swing.JLabel mainPageImageLbl;

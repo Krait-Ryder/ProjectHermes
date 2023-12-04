@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package classprojectoop;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.*;
+import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -15,55 +18,77 @@ import javax.swing.JOptionPane;
  */
 public class DatabaseTableCreater {
     static final String URL = "jdbc:mysql://localhost:3306/hermes";
-    static  String user = "root";
-    static  String pass = "";
+    static String user = "root";
+    static String pass = "";
+    
+
+    /**
+     *
+     */
     public void createDatabase(){
         try{
             
-            Connection connection = DriverManager.getConnection(URL,user,pass);
+            
+            Connection connection = DriverManager.getConnection(URL, user, pass);
             Statement statement = connection.createStatement();
-            String createStatement = "CREATE DATABASE IF NOT EXISTS hermes";
-            statement.executeUpdate(createStatement);
+
+            // Create database if not exists
+            String createDatabaseStatement = "CREATE DATABASE IF NOT EXISTS hermes";
+            statement.executeUpdate(createDatabaseStatement);
             System.out.println("Database Created");
 
-          connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
-            System.out.println("Connected to new database");
+            // Switch to the created database
+            connection = DriverManager.getConnection(URL, user, pass);
+            System.out.println("Connected to the new database");
 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
-            System.out.println("Connected to new database");/*
+            //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hermes",user,pass);
+            //System.out.println("Connected to new database");
 
-            String createTable = "CREATE TABLE IF NOT EXSISTS messages("
+            // Create messages table
+            String createTableMessages = "CREATE TABLE IF NOT EXISTS messages ("
                     + "id INT AUTO_INCREMENT PRIMARY KEY not NULL,"
                     + "message VARCHAR(500),"
-                    + "time TIMESTAMP DEFAULT CURRENT_TIMESTAMP"
+                    + "time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
                     + "profileId INT NOT NULL"
                     + ")";
-            statement.executeUpdate(createTable);
+            statement.executeUpdate(createTableMessages);
+            System.out.println("Messages Table Created");
 
-            System.out.println("Table Created Hello");
-            String 
-*/
-           /* String newTable = "CREATE TABLE users("
+            // Create users table
+            String createTableUsers = "CREATE TABLE IF NOT EXISTS users ("
                     + "id INT AUTO_INCREMENT PRIMARY KEY,"
                     + "userName VARCHAR(255),"
                     + "password VARCHAR(255),"
-                    + "email VARCHAR(255))";
-            statement.executeUpdate(newTable);
-            System.out.println("Table created");*/
-            String newTable = "CREATE TABLE messages("
+                    + "email VARCHAR(255)"
+                    + ")";
+             statement.executeUpdate(createTableUsers);
+            System.out.println("Users Table Created");
+            
+            
+            String newTableM = "CREATE TABLE messages("
                     + "id INT AUTO_INCREMENT PRIMARY KEY,"
                     + "message VARCHAR(255))";
-            statement.executeUpdate(newTable);
+            statement.executeUpdate(newTableM);
             System.out.println("Table created");
             
-       //     System.out.println("Table Created");*/
+            System.out.println("Table Created");
 
         }
-
+        
         catch (SQLException e){
             e.printStackTrace();
         }
     }
+
+    /**
+     *
+     * @param users
+     * @param passwords
+     * @param email
+     */
+    
+    
+    
     public void insertUser(String users,String passwords, String email){
         try{  
           Connection connection = DriverManager.getConnection(URL,user,pass);
@@ -78,6 +103,11 @@ public class DatabaseTableCreater {
             System.out.println(e.toString());
         }
     }
+
+    /**
+     *
+     * @param message
+     */
     public void sendMessage(String message){
         // send the message
           Connection connection;
@@ -91,6 +121,11 @@ public class DatabaseTableCreater {
             Logger.getLogger(DatabaseTableCreater.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    /**
+     *
+     * @return
+     */
     public String getMessage(){
         String message = "";
         try {
@@ -98,8 +133,13 @@ public class DatabaseTableCreater {
             Connection connection = DriverManager.getConnection(URL,user,pass);
             Statement statement = connection.createStatement();
             String getMessage = "SELECT message FROM messages WHERE id = 1";
-            statement.executeUpdate(getMessage);
-           
+            ResultSet resultSet = statement.executeQuery(getMessage);
+            
+            if (resultSet.next()) {
+                 message = resultSet.getString("message");
+            }
+             
+            
         } catch (SQLException ex) {
             Logger.getLogger(DatabaseTableCreater.class.getName()).log(Level.SEVERE, null, ex);
         }
